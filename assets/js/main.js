@@ -1,9 +1,3 @@
-/**
-* Template Name: Impact - v1.1.1
-* Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
@@ -70,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileNavHide = document.querySelector('.mobile-nav-hide');
 
   document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
-    el.addEventListener('click', function(event) {
+    el.addEventListener('click', function (event) {
       event.preventDefault();
       mobileNavToogle();
     })
@@ -106,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
 
   navDropdowns.forEach(el => {
-    el.addEventListener('click', function(event) {
+    el.addEventListener('click', function (event) {
       if (document.querySelector('.mobile-nav-active')) {
         event.preventDefault();
         this.classList.toggle('active');
@@ -131,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   const scrollTop = document.querySelector('.scroll-top');
   if (scrollTop) {
-    const togglescrollTop = function() {
+    const togglescrollTop = function () {
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
     window.addEventListener('load', togglescrollTop);
@@ -257,8 +251,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       let menuFilters = document.querySelectorAll('.portfolio-isotope .portfolio-flters li');
-      menuFilters.forEach(function(el) {
-        el.addEventListener('click', function() {
+      menuFilters.forEach(function (el) {
+        el.addEventListener('click', function () {
           document.querySelector('.portfolio-isotope .portfolio-flters .filter-active').classList.remove('filter-active');
           this.classList.add('filter-active');
           portfolioIsotope.arrange({
