@@ -576,6 +576,55 @@ section {
   border-color: rgba(255, 255, 255, 0.5);
 }
 
+.labels {
+  flex-direction: column;
+}
+
+.form-control {
+  font-family: system-ui, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 1em;
+  border: none;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.12em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em green;
+  background-color: green;
+}
+
+input[type="radio"]:hover {
+  background-color: greenyellow;
+  border: greenyellow;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
 /*--------------------------------------------------------------
 # Our Team Section
 --------------------------------------------------------------*/
