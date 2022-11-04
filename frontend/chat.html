@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Engine</title>
+    <link rel="stylesheet" href="./assets/css/chatEngine/style.css" />
+  </head>
+  <body>
+    <nav>
+      <img src="./assets/img/chatEngine/chat4.png" alt="" class="logo" />
+      <img id="boy" src="./assets/img/chatEngine/boy2.png" alt="" />
+      <img id="girl" src="./assets/img/chatEngine/girl.png" alt="" />
+      <img src="{}" alt="" />
+      <div class="container">
+        <!-- <div class="message right">Harry : Hey How are you</div>
+        <div class="message left">Rohan : I am fine</div> -->
+      </div>
+      <div class="send">
+        <form action="#" id="send-container">
+          <input
+            type="text"
+            placeholder="Type a message"
+            name="messageinp"
+            id="messageinp"
+          />
+          <button class="btn" type="submit">Send</button>
+        </form>
+      </div>
+    </nav>
+    <script defer src="http://localhost:4111/socket.io/socket.io.js"></script>
+
+    <script defer src="./assets/js/chatEngine/Client.js"></script>
+  </body>
+</html>
