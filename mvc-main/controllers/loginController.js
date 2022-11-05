@@ -1,3 +1,4 @@
+const Therapist = require("../models/Therapist");
 const passport = require("passport");
 const Patient = require("../models/patient");
 const bcrypt = require("bcryptjs");
@@ -6,7 +7,23 @@ const bcrypt = require("bcryptjs");
 const registerViewPatient = (req, res) => {
   res.render("register", {});
 };
+const therapist_db=(req,res)=>{
+  // const items = [];
 
+  Therapist.find({}, (err, tasks) => {
+      if (err) {
+          console.log(err);
+      } else {
+        console.log(tasks);
+        console.log(typeof(tasks));
+
+         
+      }
+
+      res.render('therapist-db', {tasks : tasks });
+  });
+  
+}
 //Post Request for Register
 
 const registerPatient = (req, res) => {
@@ -91,7 +108,6 @@ const loginPatient = (req, res) => {
   }
 };
 //////////////////////////////////////////////Therapist
-const Therapist = require("../models/Therapist");
 const registerViewTherapist = (req, res) => {
   res.render("registerTherapist", {});
 };
@@ -302,10 +318,7 @@ loginTherapist1 = async function(req , res){
       }
 
     
-      
-      return res.status(200).json({
-          message:"User Logged In Successfully",
-      })
+    res.render('/patient',{user: user } )
 
   }catch(err){
       console.log(err);
@@ -326,6 +339,7 @@ module.exports = {
   // loginPatient,
   registerViewTherapist,
   loginViewTherapist,
+  therapist_db,
   loginTherapist1,
   registerTherapist1,
   loginPatient1,
