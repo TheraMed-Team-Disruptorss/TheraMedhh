@@ -375,7 +375,7 @@
                                     yourself
                                     – or feeling that you are a
                                     failure, or that you have let yourself or your family down?</h5>
-                                <div class="card-text d-flex labels">
+                                <div class="card-text d-flex labels" aria-required="true">
                                     <label class="form-control"><input type="radio" name="Qn-10" value="Not at all">Not
                                         at
                                         all</label>
@@ -394,8 +394,10 @@
                     </div>
 
                     <div class="d-grid gap-2 col-2 mx-auto">
-                        <button type="submit" class="mood-get-started" onclick="submitData()">Submit</button>
+                        <button type="submit" class="mood-get-started" id="btClickMe"
+                            onclick="submitData()">Submit</button>
                     </div>
+
                 </div>
             </form>
 
