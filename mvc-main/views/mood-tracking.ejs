@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>TheraMed-Mood Tracking</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/Feeling.png" rel="icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!--Jquery CDN-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center">
+
+        <div class="container-fluid container-xxl d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+
+                <img src="assets/img/hearts.png" alt="img">
+                <h1>TheraMed<span>.</span></h1>
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/therapist-db.html">Find a Therapist</a></li>
+                    <li><a href="/">My Points</a></li>
+                    <li><a href="#team">Start Tracking</a></li>
+                </ul>
+            </nav><!-- .navbar -->
+
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+        </div>
+    </header><!-- End Header -->
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero">
+        <div class="container position-relative">
+            <div class="row gy-5" data-aos="fade-in">
+                <div
+                    class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+                    <h2>Welcome to <span>TheraMed</span></h2>
+                    <p>A platform developed For best experience for both the user and the therapist.
+                    </p>
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <a href="#stats-counter" class="btn-get-started">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <img src="assets/img/mainbg.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+                </div>
+            </div>
+        </div>
+
+        <div class="icon-boxes position-relative">
+            <div class="container position-relative">
+                <div class="row gy-4 mt-5">
+
+                    <div class="col-xl-3 col-md-6" data-aos="fade-down" data-aos-delay="100">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bi bi-easel"></i></div>
+                            <h4 class="title"><a href="" class="stretched-link">Video chat</a></h4>
+                        </div>
+                    </div>
+                    <!--End Icon Box -->
+
+                    <div class="col-xl-3 col-md-6" data-aos="fade-down" data-aos-delay="200">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bi bi-gem"></i></div>
+                            <h4 class="title"><a href="" class="stretched-link">Earn some reward points</a></h4>
+                        </div>
+                    </div>
+                    <!--End Icon Box -->
+
+                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                            <h4 class="title"><a href="" class="stretched-link">Chat with therapist</a></h4>
+                        </div>
+                    </div>
+                    <!--End Icon Box -->
+
+                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bi bi-command"></i></div>
+                            <h4 class="title"><a href="" class="stretched-link">Book a session</a></h4>
+                        </div>
+                    </div>
+                    <!--End Icon Box -->
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <!--======== Mood tracking =======-->
+
+    <section id="team" class="team">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-header">
+                <h2>Mood Tracker Quiz</h2>
+                <p>Answer these simple questions and get your mood chart !</p>
+            </div>
+
+            <form id="formid">
+                <div class="row d-grid gap-lg-5">
+                    <div class="col-sm-8 col-lg-8 col-lg-md-8 mx-auto">
+                        <div class="card p-lg-3">
+                            <div class="card-body">
+                                <h5 class="card-title pb-3">Over the last two weeks have you been feeling
+                                    down,depressed, irritable, or hopeless?</h5>
+                                <div class="card-text d-flex labels">
+                                    <label class="form-control">
+                                        <input type="radio" name="Qn-1" value="Not at all">Not at all
+                                    </label>
+
+                                    <label class="form-control">
+                                        <input type="radio" name="Qn-1" value="Several Days">Several Days
+                                    </label>
+
+                                    <label class="form-control">
+                                        <input type="radio" name="Qn-1" value="More than half the days">More than half
+                                        the days
+                                    </label>
+
+                                    <label class="form-control">
+                                        <input type="radio" name="Qn-1" value="Nearly every day">Nearly every day
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-8 col-lg-8 col-lg-md-8 mx-auto">
+                        <div class="card p-lg-3">
+                            <div class="card-body">
+                                <h5 class="card-title pb-3">Over the last two weeks have you had little interest or
+                                    pleasure
+                                    in doing things?</h5>
+                                <div class="card-text d-flex labels">
+                                    <label class="form-control"><input type="radio" name="Qn-2" value="Not at all">Not
+                                        at all</label>
+                                    <label class="form-control"><input type="radio" name="Qn-2"
+                                            value="Several Days">Several Days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-2"
+                                            value="More than half the days">More than
+                                        half the
+                                        days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-2"
+                                            value="Nearly every day">Nearly every
+                                        day</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-8 col-lg-8 col-lg-md-8 mx-auto">
+                        <div class="card p-lg-3">
+                            <div class="card-body">
+                                <h5 class="card-title pb-3 ">Over the last two weeks have you had trouble falling
+                                    asleep,
+                                    staying asleep, or have you been
+                                    sleeping too much?</h5>
+                                <div class="card-text d-flex labels">
+                                    <label class="form-control"><input type="radio" name="Qn-3" value="Not at all">Not
+                                        at
+                                        all</label>
+                                    <label class="form-control"><input type="radio" name="Qn-3"
+                                            value="Several Days">Several
+                                        Days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-3"
+                                            value="More than half the days">More than
+                                        half the
+                                        days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-3"
+                                            value="Nearly every day">Nearly every
+                                        day</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-8 col-lg-8 col-lg-md-8 mx-auto">
+                        <div class="card p-lg-3">
+                            <div class="card-body">
+                                <h5 class="card-title pb-3">Over the last two weeks have you had poor appetite, weight
+                                    loss,
+                                    or have you been overeating?</h5>
+                                <div class="card-text d-flex labels">
+                                    <label class="form-control"><input type="radio" name="Qn-4" value="Not at all">Not
+                                        at
+                                        all</label>
+                                    <label class="form-control"><input type="radio" name="Qn-4"
+                                            value="Several Days">Several
+                                        Days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-4"
+                                            value="More than half the days">More than
+                                        half the
+                                        days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-4"
+                                            value="Nearly every day">Nearly every
+                                        day</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-8 col-lg-8 col-lg-md-8 mx-auto">
+                        <div class="card p-lg-3">
+                            <div class="card-body">
+                                <h5 class="card-title pb-3">Over the last two weeks have you been feeling tired, or have
+                                    you
+                                    had little energy?</h5>
+                                <div class="card-text d-flex labels">
+                                    <label class="form-control"><input type="radio" name="Qn-5" value="Not at all">Not
+                                        at
+                                        all</label>
+                                    <label class="form-control"><input type="radio" name="Qn-5"
+                                            value="Several Days">Several
+                                        Days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-5"
+                                            value="More than half the days">More than
+                                        half the
+                                        days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-5"
+                                            value="Nearly every day">Nearly every
+                                        day</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-8 col-lg-8 col-lg-md-8 mx-auto">
+                        <div class="card p-lg-3">
+                            <div class="card-body">
+                                <h5 class="card-title pb-3">Over the last two weeks have you been feeling bad about
+                                    yourself
+                                    – or feeling that you are a
+                                    failure, or that you have let yourself or your family down?</h5>
+                                <div class="card-text d-flex labels">
+                                    <label class="form-control"><input type="radio" name="Qn-6" value="Not at all">Not
+                                        at
+                                        all</label>
+                                    <label class="form-control"><input type="radio" name="Qn-6"
+                                            value="Several Days">Several
+                                        Days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-6"
+                                            value="More than half the days">More than
+                                        half the
+                                        days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-6"
+                                            value="Nearly every day">Nearly every
+                                        day</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-8 col-lg-8 col-lg-md-8 mx-auto">
+                        <div class="card p-lg-3">
+                            <div class="card-body">
+                                <h5 class="card-title pb-3">Over the last two weeks have you had trouble concentrating
+                                    on
+                                    things like schoolwork, reading,
+                                    or watching TV?</h5>
+                                <div class="card-text d-flex labels">
+                                    <label class="form-control"><input type="radio" name="Qn-7" value="Not at all">Not
+                                        at
+                                        all</label>
+                                    <label class="form-control"><input type="radio" name="Qn-7"
+                                            value="Several Days">Several
+                                        Days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-7"
+                                            value="More than half the days">More than
+                                        half the
+                                        days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-7"
+                                            value="Nearly every day">Nearly every
+                                        day</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-8 col-lg-8 col-lg-md-8 mx-auto">
+                        <div class="card p-lg-3">
+                            <div class="card-body">
+                                <h5 class="card-title pb-3">Over the last two weeks have you been moving or speaking so
+                                    slowly that other people could have
+                                    noticed? Or the opposite – being so fidgety or restless that you were moving around
+                                    a lot more
+                                    than usual?</h5>
+                                <div class="card-text d-flex labels">
+                                    <label class="form-control"><input type="radio" name="Qn-8" value="Not at all">Not
+                                        at
+                                        all</label>
+                                    <label class="form-control"><input type="radio" name="Qn-8"
+                                            value="Several Days">Several
+                                        Days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-8"
+                                            value="More than half the days">More than
+                                        half the
+                                        days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-8"
+                                            value="Nearly every day">Nearly every
+                                        day</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-8 col-lg-8 col-lg-md-8 mx-auto">
+                        <div class="card p-lg-3">
+                            <div class="card-body">
+                                <h5 class="card-title pb-3">Over the last two weeks have you had thoughts that you would
+                                    be
+                                    better off dead, or of hurting
+                                    yourself in some way?</h5>
+                                <div class="card-text d-flex labels">
+                                    <label class="form-control"><input type="radio" name="Qn-9" value="Not at all">Not
+                                        at
+                                        all</label>
+                                    <label class="form-control"><input type="radio" name="Qn-9"
+                                            value="Several Days">Several
+                                        Days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-9"
+                                            value="More than half the days">More than
+                                        half the
+                                        days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-9"
+                                            value="Nearly every day">Nearly every
+                                        day</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-8 col-lg-8 col-lg-md-8 mx-auto">
+                        <div class="card p-lg-3">
+                            <div class="card-body">
+                                <h5 class="card-title pb-3">Over the last two weeks have you been feeling bad about
+                                    yourself
+                                    – or feeling that you are a
+                                    failure, or that you have let yourself or your family down?</h5>
+                                <div class="card-text d-flex labels">
+                                    <label class="form-control"><input type="radio" name="Qn-10" value="Not at all">Not
+                                        at
+                                        all</label>
+                                    <label class="form-control"><input type="radio" name="Qn-10"
+                                            value="Several Days">Several Days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-10"
+                                            value="More than half the days">More than
+                                        half the
+                                        days</label>
+                                    <label class="form-control"><input type="radio" name="Qn-10"
+                                            value="Nearly every day">Nearly every
+                                        day</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2 col-2 mx-auto">
+                        <button type="submit" class="mood-get-started" onclick="submitData()">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+    </section>
+
+    <!--End Mood tracking-->
+
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        function submitData() {
+            var ele = document.getElementsByTagName('input');
+            jsonObj = [];
+            for (i = 0; i < ele.length; i++) {
+
+                if (ele[i].type = "radio") {
+                    if (ele[i].checked) {
+                        item = {};
+                        item["Name"] = ele[i].name;
+                        item["Value"] = ele[i].value;
+                        jsonObj.push(item);
+                    }
+
+                }
+
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>TheraMed-User page</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/Feeling.png" rel="icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center ">
+
+        <div class="container-fluid container-xxl d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+
+                <img src="assets/img/hearts.png" alt="img">
+                <h1>TheraMed<span>.</span></h1>
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#stats-counter">Mood Tracking</a></li>
+                    <li><a href="#team">Your Therapist</a></li>
+                    <li><a href="/">My Points</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#recent-posts">Blog</a></li>
+                    <li>
+                        <img class="mr-2" src="https://pro.propeller.in/assets/images/avatar-icon-40x40.png" width="40"
+                            height="40" alt="avatar">
+                    <li class="media-body">
+                        <%user.name%>
+                    </li>
+                    </li>
+                    <li><a href="index.html">Logout</a></li>
+                </ul>
+            </nav><!-- .navbar -->
+
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+            <!-- Login Modal -->
+            <div class="modal fade " id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="LoginModalLabel">Login</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body ">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+
+                                <label for="exampleDataList" class="form-label ">select who you are ?</label>
+                                <input class="form-control mb-3" list="datalistOptions" id="exampleDataList"
+                                    placeholder="choose">
+                                <datalist id="datalistOptions">
+                                    <option value="Therapist">
+                                    <option value="Patient">
+                                </datalist>
+
+                                <button type="submit" class="btn btn-primary p2">Submit</button>
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--signup Modal -->
+            <div class="modal fade" id="SignUpModal" tabindex="-1" aria-labelledby="SignUpModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="SignUpModalLabel">SignUp</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="First name"
+                                            aria-label="First name">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Last name"
+                                            aria-label="Last name">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <h6>Gender</h6>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            male
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            female
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            other
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <label for="exampleDataList" class="form-label ">select who you are ?</label>
+                                <input class="form-control mb-3" list="datalistOptions" id="exampleDataList"
+                                    placeholder="choose">
+                                <datalist id="datalistOptions">
+                                    <option value="Therapist">
+                                    <option value="Patient">
+                                </datalist>
+
+
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header><!-- End Header -->
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero">
+        <div class="container position-relative">
+            <div class="row gy-5" data-aos="fade-in">
+                <div
+                    class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+                    <h2>Welcome to <span>TheraMed</span></h2>
+                    <p>A platform developed For best experience for both the user and the therapist.
+                    </p>
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <a href="#stats-counter" class="btn-get-started">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <img src="assets/img/mainbg.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+                </div>
+            </div>
+        </div>
+
+        <div class="icon-boxes position-relative">
+            <div class="container position-relative">
+                <div class="row gy-4 mt-5">
+
+                    <div class="col-xl-3 col-md-6" data-aos="fade-down" data-aos-delay="100">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bi bi-easel"></i></div>
+                            <h4 class="title"><a href="" class="stretched-link">Video chat</a></h4>
+                        </div>
+                    </div>
+                    <!--End Icon Box -->
+
+                    <div class="col-xl-3 col-md-6" data-aos="fade-down" data-aos-delay="200">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bi bi-gem"></i></div>
+                            <h4 class="title"><a href="" class="stretched-link">Earn some reward points</a></h4>
+                        </div>
+                    </div>
+                    <!--End Icon Box -->
+
+                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                            <h4 class="title"><a href="" class="stretched-link">Chat with therapist</a></h4>
+                        </div>
+                    </div>
+                    <!--End Icon Box -->
+
+                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bi bi-command"></i></div>
+                            <h4 class="title"><a href="" class="stretched-link">Book a session</a></h4>
+                        </div>
+                    </div>
+                    <!--End Icon Box -->
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <main id="main">
+        <!-- ======= Stats Counter Section ======= -->
+        <section id="stats-counter" class="stats-counter">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row gy-4 align-items-center">
+
+                    <div class="col-lg-6">
+                        <img src="assets/img/Feeling.png" alt="" class="img-fluid">
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <div class="stats-item d-flex align-items-center">
+                            <h2>Feeling Low ? <span style="margin-top: 3%;">Avail mood tracking service and earn
+                                    rewards</span> </h2>
+                        </div><!-- End Stats Item -->
+
+
+                        <div class="stats-item d-flex align-items-center">
+                            <a href="mood-tracking.html" class="mood-get-started">Get Started</a>
+                        </div><!-- End Stats Item -->
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Stats Counter Section -->
+
+        <!-- ======= Our Team Section ======= -->
+        <section id="team" class="team">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>Your Therapist</h2>
+                    <p>Your personal Therapist which will help you in all your situations.</p>
+                </div>
+
+                <div class="row gy-4">
+
+
+
+                    <div class="d-inline-flex p-2 bd-highlight " data-aos="fade-up" data-aos-delay="200">
+                        <div class="member featured">
+                            <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                            <h4>Sarah Jhinson</h4>
+                            <span>Your Therapist</span>
+                            <div class="social">
+                                <a href=""><i class="bi bi-twitter"></i></a>
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                                <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="my-5">
+
+                            <div class="accordion-body">
+                                <hr>
+                                <p><b>Phone </b> : 836489878</p>
+                                <hr>
+                                <p><b>Email</b> : abhi@gmail.com</p>
+                                <hr>
+                                <p><b>Fees</b> : 5000</p>
+                                <hr>
+                                <p><a href=""><b>Know more</b></a></p>
+                                <hr>
+                                <p><b>Description</b></p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
+                                    aperiam ex, fuga
+                                    harum facere modi voluptatum accusamus praesentium, quidem, voluptate
+                                    nostrum blanditiis.
+                                    Assumenda dolorem repellat minus voluptas necessitatibus, aut aperiam?
+                                </p>
+
+
+                            </div>
+
+                        </div><!-- End Team Member -->
+
+                    </div>
+
+                </div>
+        </section><!-- End Our Team Section -->
+
+        <section id="faq" class="faq">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-4">
+                        <div class="content px-xl-5">
+                            <h3>Frequently Asked <strong>Questions</strong></h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et
+                                dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+
+                        <div class="accordion accordion-flush" id="faqlist" data-aos="fade-up" data-aos-delay="100">
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-1">
+                                        <span class="num">1.</span>
+                                        Can I do all my sessions over the internet?
+                                    </button>
+                                </h3>
+                                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                    <div class="accordion-body">
+                                        Yes, you can. Many of our therapists now work with clients over secure video
+                                        platforms like Skype or
+                                        Zoom. If you would like to attend in person where possible and over the internet
+                                        otherwise, you can
+                                        discuss this blended approach with your therapist.
+                                    </div>
+                                </div>
+                            </div><!-- # Faq item-->
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-2">
+                                        <span class="num">2.</span>
+                                        What kinds of people seek counselling?
+                                    </button>
+                                </h3>
+                                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                    <div class="accordion-body">
+                                        There is no barrier to whom counselling can assist. We welcome you, regardless
+                                        of your culture,
+                                        religion, gender, sexual orientation, or employment group. Counselling is also
+                                        not just for adult
+                                        individuals, but is beneficial for couples, families, teenagers and children.
+                                    </div>
+                                </div>
+                            </div><!-- # Faq item-->
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-3">
+                                        <span class="num">3.</span>
+                                        What if I want to try more than one kind of therapy?
+                                    </button>
+                                </h3>
+                                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                    <div class="accordion-body">
+                                        Many therapists nowadays are what is known as 'integrative', meaning they are
+                                        trained in and combine
+                                        a variety of psychotherapeutic approaches to best help their clients. If this is
+                                        of interest, look
+                                        at individual profiles under 'Therapists' to find one that offers the therapies
+                                        you are interested
+                                        in, or call us and we can advise you further.
+                                    </div>
+                                </div>
+                            </div><!-- # Faq item-->
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-4">
+                                        <span class="num">4.</span>
+                                        How experienced is my therapist?
+                                    </button>
+                                </h3>
+                                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                    <div class="accordion-body">
+                                        The therapists all have a minimum of seven years clinical experience that often
+                                        includes time spent
+                                        working for the NHS ✓.
+                                    </div>
+                                </div>
+                            </div><!-- # Faq item-->
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-5">
+                                        <span class="num">5.</span>
+                                        What happens if I don't think the therapist is a good match for me?
+                                    </button>
+                                </h3>
+                                <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                    <div class="accordion-body">
+                                        If you do not feel the therapist is a good match, we offer you a free
+                                        consultation with one other
+                                        therapist of your choice.
+                                    </div>
+                                </div>
+                            </div><!-- # Faq item-->
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-6">
+                                        <span class="num">6.</span>
+                                        Can a counsellor prescribe medication if I need it?
+                                    </button>
+                                </h3>
+                                <div id="faq-content-6" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                    <div class="accordion-body">
+                                        The counsellors are not eligible to prescribe medication. There is, however, a
+                                        private consultant
+                                        psychiatrist who can assess you for a prescription, and this can complement your
+                                        therapy work.
+                                        Please note that the fee for psychiatry is significantly higher than that for
+                                        counselling.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Frequently Asked Questions Section -->
+
+
+        <!-- ======= Recent Blog Posts Section ======= -->
+        <section id="recent-posts" class="recent-posts sections-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>Recent Blog Posts</h2>
+                    <p>Consequatur libero assumenda est voluptatem est quidem illum et officia imilique qui vel
+                        architecto
+                        accusamus fugit aut qui distinctio</p>
+                </div>
+
+                <div class="row gy-4">
+
+                    <div class="col-xl-4 col-md-6">
+                        <article>
+
+                            <div class="post-img">
+                                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                            </div>
+
+                            <p class="post-category">PsychPedia</p>
+
+                            <h2 class="title">
+                                <a href="https://www.goodtherapy.org/blog/psychpedia/what-is-quality-of-life">Questions
+                                    that upgrade
+                                    your quality if life</a>
+                            </h2>
+
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/blog/blog-author.jpg" alt=""
+                                    class="img-fluid post-author-img flex-shrink-0">
+                                <div class="post-meta">
+                                    <p class="post-author">Maria Doe</p>
+                                    <p class="post-date">
+                                        <time datetime="2022-01-01">Jan 1, 2022</time>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div><!-- End post list item -->
+
+                    <div class="col-xl-4 col-md-6">
+                        <article>
+
+                            <div class="post-img">
+                                <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
+                            </div>
+
+                            <p class="post-category">GoodTherapy Blog</p>
+
+                            <h2 class="title">
+                                <a href="https://www.goodtherapy.org/blog/therapy/">How to Get the Most Out of Your
+                                    Therapy Journey</a>
+                            </h2>
+
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/blog/blog-author-2.jpg" alt=""
+                                    class="img-fluid post-author-img flex-shrink-0">
+                                <div class="post-meta">
+                                    <p class="post-author">Allisa Mayer</p>
+                                    <p class="post-date">
+                                        <time datetime="2022-01-01">Jun 5, 2022</time>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div><!-- End post list item -->
+
+                    <div class="col-xl-4 col-md-6">
+                        <article>
+
+                            <div class="post-img">
+                                <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
+                            </div>
+
+                            <p class="post-category"> NAMI Blog</p>
+
+                            <h2 class="title">
+                                <a
+                                    href="https://www.nami.org/Blogs/NAMI-Blog/October-2022/5-Truths-I-Discovered-on-My-Road-to-Recovery">5
+                                    Truths I Discovered on My Road to Recovery</a>
+                            </h2>
+
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/blog/blog-author-3.jpg" alt=""
+                                    class="img-fluid post-author-img flex-shrink-0">
+                                <div class="post-meta">
+                                    <p class="post-author">Mark Dower</p>
+                                    <p class="post-date">
+                                        <time datetime="2022-01-01">Jun 22, 2022</time>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div><!-- End post list item -->
+
+                </div><!-- End recent posts list -->
+
+            </div>
+        </section><!-- End Recent Blog Posts Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+
+        <div class="container">
+
+            <div class="container mt-4">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>TheraMed</span></strong> || All Rights Reserved
+                </div>
+                <div class="credits">
+                    Team Disruptorss
+                </div>
+            </div>
+
+    </footer><!-- End Footer -->
+    <!-- End Footer -->
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

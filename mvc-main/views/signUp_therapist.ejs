@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>SignUp Therapist</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script
+        nonce="ca50891d-807d-4e27-9e9e-d74d8e4e2506">(function (w, d) { !function (Z, _, ba, bb) { Z.zarazData = Z.zarazData || {}; Z.zarazData.executed = []; Z.zaraz = { deferred: [], listeners: [] }; Z.zaraz.q = []; Z.zaraz._f = function (bc) { return function () { var bd = Array.prototype.slice.call(arguments); Z.zaraz.q.push({ m: bc, a: bd }) } }; for (const be of ["track", "set", "debug"]) Z.zaraz[be] = Z.zaraz._f(be); Z.zaraz.init = () => { var bf = _.getElementsByTagName(bb)[0], bg = _.createElement(bb), bh = _.getElementsByTagName("title")[0]; bh && (Z.zarazData.t = _.getElementsByTagName("title")[0].text); Z.zarazData.x = Math.random(); Z.zarazData.w = Z.screen.width; Z.zarazData.h = Z.screen.height; Z.zarazData.j = Z.innerHeight; Z.zarazData.e = Z.innerWidth; Z.zarazData.l = Z.location.href; Z.zarazData.r = _.referrer; Z.zarazData.k = Z.screen.colorDepth; Z.zarazData.n = _.characterSet; Z.zarazData.o = (new Date).getTimezoneOffset(); Z.zarazData.q = []; for (; Z.zaraz.q.length;) { const bl = Z.zaraz.q.shift(); Z.zarazData.q.push(bl) } bg.defer = !0; for (const bm of [localStorage, sessionStorage]) Object.keys(bm || {}).filter((bo => bo.startsWith("_zaraz_"))).forEach((bn => { try { Z.zarazData["z_" + bn.slice(7)] = JSON.parse(bm.getItem(bn)) } catch { Z.zarazData["z_" + bn.slice(7)] = bm.getItem(bn) } })); bg.referrerPolicy = "origin"; bg.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(Z.zarazData))); bf.parentNode.insertBefore(bg, bf) };["complete", "interactive"].includes(_.readyState) ? zaraz.init() : Z.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, 0, "script"); })(window, document);</script>
+</head>
+
+<body class="img js-fullheight" style="background-image:url(images/xbg.jpg.pagespeed.ic.tiVxeakBSd.webp)">
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">SignUp Therapist</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="login-wrap p-0">
+                        <h3 class="mb-4 text-center">Have an account?</h3>
+                        <form action="/registerTherapist" class="signin-form"method="post">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Phone .No" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Email ID" required>
+                            </div>
+                            <div class="form-group">
+                                <input id="password-field" type="password" class="form-control" placeholder="Password"
+                                    required>
+                                <span toggle="#password-field"
+                                    class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                            <div class="form-group">
+                                <input id="password-field" type="password" class="form-control"
+                                    placeholder="Confirm Password" required>
+                                <span toggle="#password-field"
+                                    class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Fees" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="More info" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label"></label>
+                                <textarea class="form-control" placeholder="Description"
+                                    id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+                            </div>
+
+                            <!-- <div class="form-group d-md-flex">
+
+                                <div class="w-50 text-md-right">
+                                    <a href="#" style="color: #fff">Forgot Password</a>
+                                </div>
+                            </div> -->
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js+bootstrap.min.js+main.js.pagespeed.jc.9eD6_Mep8S.js"></script>
+    <script>eval(mod_pagespeed_T07FyiNNgg);</script>
+    <script>eval(mod_pagespeed_zB8NXha7lA);</script>
+    <script>eval(mod_pagespeed_xfgCyuItiV);</script>
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
+        integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+        data-cf-beacon='{"rayId":"764de2075add8583","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.11.0","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
