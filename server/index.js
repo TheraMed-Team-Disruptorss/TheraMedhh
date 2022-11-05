@@ -3,7 +3,6 @@ const io = require("socket.io")(8000, {
     origin: "*",
   },
 });
-
 const users = {};
 
 io.on("connection", (socket) => {
@@ -23,5 +22,10 @@ io.on("connection", (socket) => {
   socket.on("disconnect", (message) => {
     socket.broadcast.emit("left", users[socket.id]);
     delete users[socket.id];
+  });
+
+  socket.on("join-room", (roomId, userId) => {
+    socket.join(roomId);
+    socket.to(roomId).broadcast.emit("user-connected", userId);
   });
 });
